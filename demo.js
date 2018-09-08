@@ -1,204 +1,83 @@
-const ap1 = new APlayer({
-    element: document.getElementById('player1'),
-    mini: false,
-    autoplay: false,
-    lrcType: false,
-    mutex: true,
-    preload: 'metadata',
-    audio: [{
-        name: '光るなら',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.mp3',
-        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
-        theme: '#ebd0c2'
-    }]
-});
-ap1.on('play', function () {
-    console.log('play');
-});
-ap1.on('play', function () {
-    console.log('play play');
-});
-ap1.on('pause', function () {
-    console.log('pause');
-});
-ap1.on('canplay', function () {
-    console.log('canplay');
-});
-ap1.on('playing', function () {
-    console.log('playing');
-});
-ap1.on('ended', function () {
-    console.log('ended');
-});
-ap1.on('error', function () {
-    console.log('error');
-});
-
-const ap2 = new APlayer({
-    element: document.getElementById('player2'),
-    mini: true,
-    autoplay: false,
-    lrcType: false,
-    mutex: true,
-    audio: [{
-        name: '光るなら',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.mp3',
-        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.lrc',
-        theme: '#ebd0c2'
-    }]
-});
-
-const ap3 = new APlayer({
-    element: document.getElementById('player3'),
-    mini: false,
-    autoplay: false,
-    lrcType: 3,
-    mutex: true,
-    audio: [{
-        name: '光るなら',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.mp3',
-        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.lrc',
-        theme: '#ebd0c2'
-    }]
-});
 
 const ap4 = new APlayer({
     element: document.getElementById('player4'),
     mini: false,
-    autoplay: false,
+    autoplay: true,
     lrcType: false,
     mutex: true,
     theme: '#ad7a86',
     order: 'random',
     audio: [{
-        name: '光るなら',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.mp3',
+        name: '童话镇',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20%E7%AB%A5%E8%AF%9D%E9%95%87.mp3',
         cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.lrc',
         theme: '#ebd0c2'
     }, {
-        name: 'トリカゴ',
-        artist: 'XX:me',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/darling.mp3',
+        name: '阿婆说',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20%E9%98%BF%E5%A9%86%E8%AF%B4.mp3',
         cover: 'https://moeplayer.b0.upaiyun.com/aplayer/darling.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/darling.lrc',
         theme: '#46718b'
     }, {
-        name: '前前前世',
-        artist: 'RADWIMPS',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/yourname.mp3',
+        name: '弦上有春秋',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20%E5%BC%A6%E4%B8%8A%E6%9C%89%E6%98%A5%E7%A7%8B.mp3',
         cover: 'https://moeplayer.b0.upaiyun.com/aplayer/yourname.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/yourname.lrc',
+      
         theme: '#505d6b'
     }, {
-        name: '光るなら(HLS)',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hls/hikarunara.m3u8',
+        name: '剑与家园',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20%E5%89%91%E4%B8%8E%E5%AE%B6%E5%9B%AD.mp3',
         cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
         theme: '#ebd0c2',
-        type: 'hls'
-    }]
-});
-
-const ap5 = new APlayer({
-    element: document.getElementById('player5'),
-    mini: false,
-    autoplay: false,
-    lrcType: 3,
-    mutex: true,
-    theme: '#e9e9e9',
-    listFolded: false,
-    listMaxHeight: 80,
-    audio: [{
-        name: '光るなら',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.mp3',
-        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.lrc',
-    }, {
-        name: 'トリカゴ',
-        artist: 'XX:me',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/darling.mp3',
-        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/darling.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/darling.lrc',
-    }, {
-        name: '前前前世',
-        artist: 'RADWIMPS',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/yourname.mp3',
-        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/yourname.jpg',
-        lrc: 'https://moeplayer.b0.upaiyun.com/aplayer/yourname.lrc',
-    }]
-});
-const colorThief = new ColorThief();
-const setTheme = (index) => {
-    if (!ap5.list.audios[index].theme) {
-        colorThief.getColorAsync(ap5.list.audios[index].cover, function (color) {
-            ap5.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-        });
     }
-};
-setTheme(ap5.list.index);
-ap5.on('listswitch', (data) => {
-    setTheme(data.index);
-});
-
-const ap6 = new APlayer({
-    element: document.getElementById('player6'),
-    mutex: true,
-    audio: [{
-        name: '光るなら(HLS)',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hls/hikarunara.m3u8',
+    , {
+        name: '红色高跟鞋(川话版)',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20%E7%BA%A2%E8%89%B2%E9%AB%98%E8%B7%9F%E9%9E%8B%28%E5%B7%9D%E8%AF%9D%E7%89%88%29.mp3',
         cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
         theme: '#ebd0c2',
-        type: 'hls'
-    }]
-});
-const ap7 = new APlayer({
-    element: document.getElementById('player7'),
-    mutex: true,
-    audio: [{
-        name: '光るなら(HLS)',
-        artist: 'Goose house',
-        url: 'https://moeplayer.b0.upaiyun.com/aplayer/hls/hikarunara.m3u8',
+    }
+
+
+    , {
+        name: '克卜勒',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20%E5%85%8B%E5%8D%9C%E5%8B%92.mp3',
         cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
         theme: '#ebd0c2',
-        type: 'customHls',
-    }],
-    customAudioType: {
-        'customHls': function (audioElement, audio, player) {
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(audio.url);
-                hls.attachMedia(audioElement);
-            }
-            else if (audioElement.canPlayType('application/x-mpegURL') || audioElement.canPlayType('application/vnd.apple.mpegURL')) {
-                audioElement.src = audio.url;
-            }
-            else {
-                player.notice('Error: HLS is not supported.');
-            }
-        }
     }
+
+
+    , {
+        name: 'cant take my eyes off you',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20can%27t%20take%20my%20eyes%20off%20you.mp3',
+        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
+        theme: '#ebd0c2',
+    }
+
+
+    , {
+        name: 'New Soul',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20New%20Soul.mp3',
+        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
+        theme: '#ebd0c2',
+    }
+
+
+    , {
+        name: 'Bizarre Love Triangle',
+        artist: '陈一发儿',
+        url: 'http://zxmoa.qiniudn.com/%E9%99%88%E4%B8%80%E5%8F%91%E5%84%BF%20-%20Bizarre%20Love%20Triangle.mp3',
+        cover: 'https://moeplayer.b0.upaiyun.com/aplayer/hikarunara.jpg',
+        theme: '#ebd0c2',
+    }
+
+]
 });
 
-const ap8 = new APlayer({
-    element: document.getElementById('player8'),
-    mutex: true,
-    theme: '#ad7a86',
-    order: 'random',
-    lrcType: 3,
-    fixed: true,
-});
-$.ajax({
-    url: 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=35798529',
-    success: function (list) {
-        ap8.list.add(JSON.parse(list));
-    }
-});
+
